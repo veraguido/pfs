@@ -1,0 +1,30 @@
+#!/usr/bin/php -q
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use PFS\Estimation;
+
+/*if(!Validations::validateCLIInput($argv)) {
+    exit('Something with the input parameters is wrong' . PHP_EOL);
+}
+
+$estimation = new Estimation(
+    explode(',', $argv[1]),
+    intval($argv[2]),
+    $argv[3],
+        floatval($argv[4]) ?? null,
+    !isset($argv[5]) || boolval($argv[5])
+);*/
+
+
+
+try {
+
+    $estimation = new Estimation();
+
+    $estimation->runCheckPlanRisk();
+} catch (Exception $e) {
+    echo 'Something went wrong' . PHP_EOL;
+    echo $e->getMessage();
+}

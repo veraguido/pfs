@@ -1,0 +1,22 @@
+{
+  "name": "gvera/pfs",
+  "description": "This is a package to provide a probabilistic forecast simulation to generate estimations",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "guido",
+      "email": "vera.a.guido@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-yaml": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PFS\\": [
+        "src/"
+      ]
+    }
+  }
+}
